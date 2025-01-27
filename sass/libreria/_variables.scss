@@ -1,0 +1,18 @@
+//voy a cargar los 3 colores principales del proyecto 
+
+$color-rojo:#a51c24 ;
+$color-naranja:#db9600 ;
+$color-negro:#262627;
+$degradado-colores: linear-gradient(to bottom right, #db9600, #a51c24, #262627);
+$degradado-vertical: linear-gradient(to bottom, #db9600, #a51c24, #262627);
+$degradado-diagonal-inverso: linear-gradient(to top left, #db9600, #a51c24, #262627);
+$degradado-radial: radial-gradient(circle, #db9600, #a51c24, #262627);
+$degradado-paradas: linear-gradient(to bottom right, #db9600 30%, #a51c24 60%, #262627 90%);
+$degradado-esquinas: linear-gradient(to top right, #db9600, #a51c24);
+$degradado-central: linear-gradient(to bottom, #a51c24, #db9600, #a51c24);
+
+
+$fuente-bueno:'bueno-regular';
+$fuente-dharma:'dharmagothic';
+$fuente-calvera: 'calvera';
+$fuente-kusanagi:'Kusanagi-Regular' ;

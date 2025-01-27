@@ -1,0 +1,665 @@
+//importo mi libreria 
+@import "libreria/variables";
+
+/*reseteo algunos estilos y le cambio el tamaño de fuente preseteado de html*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+/*le saco la decoration a todas las etiquetas de ancla*/
+a{
+    text-decoration: none;
+    cursor: pointer; /*cuando paso el mouse aparee una manito*/
+}
+
+/*voy a cargar las fuentes de letra del proyecto*/
+
+@font-face{
+
+    font-family: 'Kusanagi-Regular';
+    src: url(../fonts/Kusanagi.otf);
+
+}
+@font-face{
+
+    font-family: 'calvera';
+    src: url(../fonts/Calvera.ttf);
+
+}
+@font-face{
+
+    font-family: 'dharmagothic';
+    src: url(../fonts/DharmaGothicE_Heavy_I.otf);
+
+}
+@font-face{
+
+    font-family: 'bueno-regular';
+    src: url(../fonts/bueno-regular.otf);
+
+}
+
+/*estilos del header*/
+
+header {
+    
+    width: 100%;
+    height: 60px;
+}
+
+header nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: inherit;
+    display: grid;
+    grid-template-columns: (1fr 1fr);
+    align-items: center;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgba(46, 46, 46, 0.5);
+    box-shadow: 0 5px 5px rgba(43, 43, 43, 0.4);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 2rem;
+    font-family: $fuente-bueno;
+}
+header nav ul a {
+    color:$color-negro;
+}
+header .nav-left {
+    display: flex;
+    justify-self: left;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+}
+
+header .nav-right {
+    display: flex;
+    justify-self: right;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+header nav ul li a img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+header nav .nav-right .carrito-icon {
+    background-image: url('../img/icono_carrito.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /*se aproxime al tamño de mi contenedor*/
+    width: 25px;
+    height: 25px;
+}
+
+header nav .nav-right .cuenta-icon {
+    background-image: url('../img/icono_cuenta.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /*se aproxime al tamño de mi contenedor*/
+    width: 25px;
+    height: 25px;
+}
+
+/*tengo que aprender mas para no recurrir a esta trampa*/
+header nav .nav-right li a {
+    opacity: 0;
+}
+/*estilos del contenido principal o main*/
+
+.contenedor-principal{
+    margin: 1rem;
+    height: 70vh;
+    background:$degradado-colores;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-radius: 1.5rem;
+}
+
+main .img-principal {
+    height: 30%;
+    display: flex;
+    padding: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;    
+}
+main .presentacion-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+main .presentacion-principal h2{
+    font-family: $fuente-bueno;
+    font-size: 2rem;
+}
+main .presentacion-principal h1{
+    font-family: $fuente-dharma;
+    font-size: 4rem;
+}
+main .presentacion-principal p{
+    font-family: $fuente-kusanagi;
+}
+
+
+main .descripcion-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    
+}
+
+/*ajuste el boton de bootstrap a mi colorimetria*/
+main .presentacion-principal .btn-danger{
+    background-color: $color-rojo;
+    border-radius: 1rem;
+    color: whitesmoke;
+    padding: 1.5rem;
+}
+
+
+
+
+
+
+
+
+/*estilos grilla productos*/
+
+/*display:none deshabilita las imagenes*/
+section .img-cinco, section .img-seis {
+    display: none;
+}
+
+.section-pagina-principal {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 4fr);
+    row-gap: 1rem;
+    align-content: center;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin-top: 1rem;
+    margin: 1rem;
+    }
+
+section div h2 {
+    font-family: $fuente-dharma;
+    font-size: 2rem;
+}    
+
+section .img-uno {
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $degradado-vertical;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+section .img-dos {
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: $degradado-diagonal-inverso;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+section .img-tres {
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: $degradado-esquinas;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    
+}
+section .img-cuatro {
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background:$degradado-radial;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    
+}
+
+
+
+
+
+
+
+
+/*estilos del footer*/
+footer{
+    
+    background-color: #262627;
+    text-align: center;
+    font-size: 1.6rem;
+    color: whitesmoke;
+    position: absolute;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+
+
+
+/*estilos  de desktop*/
+@media screen and (min-width: 1024px) {
+
+    main{
+        border-radius: 4px;
+        margin: 5rem;
+    }
+
+    main .img-principal {
+        
+        padding: 1.6rem;
+        
+        margin-bottom: 1rem;    
+    }
+    main .presentacion-principal{
+        padding: 1rem;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+    
+    main .descripcion-principal{
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    main .presentacion-principal .boton{
+        
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        
+    }
+
+    section {
+        margin: 5rem;
+        grid-template-columns:repeat(3, 1fr ) ;
+        grid-template-rows: repeat(3,1fr);
+        row-gap: 1rem;
+        column-gap: 1rem;
+        border-radius: 1.5rem;
+        font-family: $fuente-dharma;
+        font-size: 2rem;
+    }
+    
+    section .img-cinco, section .img-seis{
+        display: block;
+    }
+    section div {
+        border-radius: 4px;
+
+    }
+    section .img-cinco {
+        background: $degradado-central;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1rem;
+        border-radius: 1.5rem;
+        
+    }
+    section .img-cinco img {
+        max-width: 100%;
+        width: 350px;
+        height: 350px;
+    }
+
+    section .img-seis {
+        background: $degradado-paradas;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1rem;
+        border-radius: 1.5rem;
+        
+    }
+    
+    section .img-uno, section .img-dos{
+        grid-column: span 1;
+    }
+    
+    section .img-cuatro{
+        grid-column: span 2;
+    }
+
+    section .img-seis{
+        grid-column: span 3;
+    }
+
+   
+    
+}
+
+
+/*vamos a darle estilo a las paginas complementarios*/
+
+/*empezamos con la pagina de registro*/
+
+.header-registrarse{
+    height: 10vh;
+}
+
+/*estilos del contenido principal de registrarse*/
+.main-principal-registrarse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.main-registrarse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    background:$degradado-colores;
+    border-radius: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 450px;
+    
+}
+
+.main-registrarse .main-registrarse-section-dos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+    h1{
+        font-family: $fuente-dharma;
+        font-size: 3rem;
+    }
+    h3{
+        font-family: $fuente-dharma;
+        font-size: 1.5rem;
+    }
+}
+
+.main-registrarse .main-registrarse-section-uno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    
+}
+
+
+.main-registrarse .main-registrarse-section-tres{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom:1rem ;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    input{
+        border-radius: 0.3rem;
+        border: 1px solid rgba(46, 46, 46, 0.5);
+        height: 3rem;
+        font-family: $fuente-bueno;
+        padding-left: 0.5rem;
+        font-size: 1.3rem;
+    }
+}
+
+
+/*estilos del footer de registrarse*/
+
+.footer-registrarse {
+    height: 10vh;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/*estilos pagina registrarse para desktop*/
+@media screen and (min-width: 1024px) {
+    .main-principal-registrarse{
+        height: 85vh;
+        margin: 0;
+    }
+    .main-registrarse {
+        
+        border-radius: 2.5rem;
+        box-shadow: 0 5px 5px rgba(43, 43, 43, 0.4);
+        margin-left: auto;
+        margin-right: auto;
+        width: 450px;
+        height: 500px;
+        
+        
+    }
+    .footer-registrarse{
+        height: 5vh;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    }
+    
+    .header-registrarse{
+        height: 10vh;
+    }
+}
+
+
+
+/*estilos de la pagina productos */
+
+.main-productos {
+    
+    margin: 1rem;
+    border: 1px solid $degradado-colores;
+    box-shadow: 0 5px 5px rgba(43, 43, 43, 0.4);
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+    h1{
+        font-family: $fuente-dharma;
+        font-size: 3rem;
+        padding: 1rem;
+    }
+}
+
+.main-productos .section-productos-uno {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: $degradado-diagonal-inverso;
+    margin: 1rem;
+    border-radius: 1rem;
+    h2{
+        font-family: $fuente-dharma;
+        font-size: 2rem;
+    }
+    button{
+        display: block;
+        height: 4rem;
+        width: 10rem;
+        font-family: $fuente-bueno;
+        font-size: 1.6rem;
+        color: $color-negro;
+    
+    }
+    img {
+        width: 350px;
+    }
+}
+.main-productos .section-productos-dos{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    background: $degradado-esquinas;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding-top: 0.5rem;
+    h2{
+        font-family: $fuente-dharma;
+        font-size: 2rem;
+    }
+    button{
+        display: block;
+        height: 4rem;
+        width: 10rem;
+        font-family: $fuente-bueno;
+        font-size: 1.6rem;
+        color: $color-negro;
+    
+    }
+}
+
+/*estilo pagina contactos*/
+
+.header-contacto {
+    height: 10vh;
+}
+
+.main-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    border: 1px solid $degradado-colores;
+    box-shadow: 0 5px 5px rgba(43, 43, 43, 0.4);
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+    height: 85vh;
+    background: $degradado-colores;
+    ul{
+        list-style: none;
+    }
+    li a {
+        display: block;
+    }
+}
+
+.main-contacto .main-contacto-iconos{
+    display: flex;
+    gap: 2rem;
+}
+
+.main-contacto .main-contacto-iconos .wp-icon {
+    background-image: url('../img/icono_wp.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /*se aproxime al tamño de mi contenedor*/
+    width: 25px;
+    height: 25px;
+}
+.main-contacto .main-contacto-iconos .ins-icon {
+    background-image: url('../img/icono_insta.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /*se aproxime al tamño de mi contenedor*/
+    width: 25px;
+    height: 25px;
+}
+.main-contacto .main-contacto-iconos .fb-icon {
+    background-image: url('../img/icono_fb.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /*se aproxime al tamño de mi contenedor*/
+    width: 25px;
+    height: 25px;
+}
+
+
+.footer-contacto{
+    height: 5vh;
+    display: flex;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .main-contacto {
+        img{
+            width: 650px;
+            height: 550px;
+        }
+        .main-contacto-iconos{
+            gap: 8rem;
+            .fb-icon, .ins-icon, .wp-icon{
+                width: 50px;
+                height: 50px;
+                
+            } 
+        }
+    }
+
+
+}
+
+
+/*estilos carrito*/
+.progress{
+    width: 94%;
+    height: 2rem;
+   
+}
+.progress-bar {
+    background-color: green;
+    color: white;
+    
+
+}
