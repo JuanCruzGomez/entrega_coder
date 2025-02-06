@@ -1,5 +1,6 @@
 //importo mi libreria 
 @import "libreria/variables";
+@import "libreria/mixin";
 
 /*reseteo algunos estilos y le cambio el tamaño de fuente preseteado de html*/
 *{
@@ -599,24 +600,21 @@ footer{
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; /*se aproxime al tamño de mi contenedor*/
-    width: 25px;
-    height: 25px;
+    @include icono_contacto;
 }
 .main-contacto .main-contacto-iconos .ins-icon {
     background-image: url('../img/icono_insta.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; /*se aproxime al tamño de mi contenedor*/
-    width: 25px;
-    height: 25px;
+    @include icono_contacto;
 }
 .main-contacto .main-contacto-iconos .fb-icon {
     background-image: url('../img/icono_fb.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; /*se aproxime al tamño de mi contenedor*/
-    width: 25px;
-    height: 25px;
+    @include icono_contacto;
 }
 
 
